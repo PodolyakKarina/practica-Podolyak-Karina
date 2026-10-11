@@ -81,7 +81,7 @@
     {\large\@program{}, anul II\par}
     \vfill
     \begin{tabular}{@{}r@{\hspace{1.2em}}l@{}}
-      \textsc{Student} & \@student \\
+      \textsc{Podolyak Karina Iulia} & \@student \\
       \textsc{Traseul} & \@traseu \\
       \textsc{Coordonator} & \@coordonator \\
       \ifx\@tutore\@empty\else\textsc{Tutore} & \@tutore \\\fi

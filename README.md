@@ -2,11 +2,11 @@
 
 | | |
 |---|---|
-| **Student** | Podolyak Karina Iulia, anul II, programul Matematică informatică / Informatică, grupa ..Informatică. |
-| **Traseul** | a) în departament / b) la partener: <numele partenerului> / c) în unitatea de învățământ: <numele școlii> |b)
+| **Student** | Podolyak Karina Iulia, anul II, programul  Informatică |
+| **Traseul** |  b) la partener: Ensemble Software SRL   |
 | **Coordonator** | conf. univ. dr. Cosmin Nicolae SABO (Universitatea Tehnică din Cluj-Napoca, Centrul Universitar Nord din Baia Mare) |
-| **Tutore** (traseele b și c) | Nume Prenume, funcția | Pop Radu,programator
-| **Data alegerii temei** | zz.ll.aaaa | 09.10.2026
+| **Tutore** (traseele b și c) | Nume Prenume, funcția:Pop Radu,programator |
+| **Data alegerii temei** | 08.10.2026 |
 
 ## Tema
 
