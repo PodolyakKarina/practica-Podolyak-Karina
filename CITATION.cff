@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Dacă utilizați această lucrare, vă rugăm să o citați astfel."
+title: "<Titlul temei>: caiet de practică de specialitate"
+type: report
+authors:
+  - family-names: "<Nume>"
+    given-names: "<Prenume>"
+    affiliation: "Universitatea Tehnică din Cluj-Napoca, Centrul Universitar Nord din Baia Mare"
+contributors:
+  - family-names: "Sabo"
+    given-names: "Cosmin Nicolae"
+    affiliation: "Universitatea Tehnică din Cluj-Napoca, Centrul Universitar Nord din Baia Mare"
+    orcid: "https://orcid.org/0000-0002-5648-7191"
+date-released: "2027-06-30"
+keywords:
+  - "practică de specialitate"
+abstract: "Coordonator: conf. univ. dr. Cosmin Nicolae SABO."

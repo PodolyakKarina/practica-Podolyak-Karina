@@ -1,0 +1,31 @@
+% Caietul de practică de specialitate. Se scrie aici și în capitole/; macheta e în caietpractica.cls (nu se modifică).
+% Compilare: XeLaTeX (latexmk, Overleaf cu Compiler XeLaTeX sau automat în GitHub, la fiecare push și la fiecare etichetă).
+\documentclass{caietpractica}
+
+\titlutema{Titlul temei}
+\student{Nume Prenume}
+\program{Informatică}                 % sau: Matematică informatică
+\traseu{a) în departament}           % sau: b) la partener: <numele partenerului>; c) în școală: <numele școlii>
+\tutore{}                             % doar la traseele b) și c): Nume Prenume, funcția
+\semestrul{1}                         % 2 în semestrul al doilea (Practica de specialitate 2)
+\InputIfFileExists{versiune.tex}{}{}  % la o etichetă (S1-E3), GitHub scrie aici versiunea; nu se completează de mână
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\input{capitole/00-declaratie}
+\input{capitole/01-introducere}
+\input{capitole/02-documentare}
+\input{capitole/03-analiza}
+\input{capitole/04-proiectare}
+\input{capitole/05-realizare}
+\input{capitole/06-testare}
+\input{capitole/07-concluzii}
+
+\bibliographystyle{plain}
+\bibliography{bibliografie}
+
+\appendix
+\input{capitole/A-etape}
+\end{document}

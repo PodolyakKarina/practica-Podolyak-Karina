@@ -1,0 +1,27 @@
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.lof
+*.lot
+*.xdv
+caiet/versiune.tex
+caiet/caiet.pdf
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+# Sistem
+.DS_Store
+Thumbs.db
+# Secrete: nu se pun niciodată în depozit
+.env
+*.key

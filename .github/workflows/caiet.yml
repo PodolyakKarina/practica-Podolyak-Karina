@@ -1,0 +1,56 @@
+# Compilează caietul de practică (caiet/caiet.tex) cu XeLaTeX:
+# - la fiecare push pe ramura principală: PDF-ul apare la Actions → rularea → Artifacts;
+# - la fiecare etichetă de etapă (S1-E1 … S2-E7), creată cu git sau din pagina Releases („Draft a new release”):
+#   PDF-ul se publică la Releases, ca „caiet-S1-E3.pdf”.
+# Acest fișier nu se modifică.
+name: Caietul de practică
+
+on:
+  push:
+    branches: [main, master]
+    paths: ["caiet/**", ".github/workflows/caiet.yml"]
+    tags: ["S*-E*"]
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: caiet-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  caiet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Versiunea (eticheta etapei) pe copertă
+        if: startsWith(github.ref, 'refs/tags/')
+        run: printf '\\etichetaetapa{%s}\n' "$GITHUB_REF_NAME" > caiet/versiune.tex
+
+      - name: Compilarea caietului (XeLaTeX)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: caiet.tex
+          working_directory: caiet
+          latexmk_use_xelatex: true
+
+      - name: Numele PDF-ului
+        run: mv caiet/caiet.pdf "caiet-${GITHUB_REF_NAME//\//-}.pdf"
+
+      - name: PDF-ul ca artefact al rulării
+        uses: actions/upload-artifact@v4
+        with:
+          name: caiet
+          path: caiet-*.pdf
+
+      - name: PDF-ul publicat la etichetă (Releases)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Etapa ${{ github.ref_name }}
+          body: Caietul de practică, compilat automat la eticheta ${{ github.ref_name }}.
+          files: caiet-*.pdf
