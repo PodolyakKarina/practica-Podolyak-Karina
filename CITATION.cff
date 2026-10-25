@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "Dacă utilizați această lucrare, vă rugăm să o citați astfel."
-title: "<Titlul temei>: caiet de practică de specialitate"
+title: "Dezvoltarea și testarea unei aplicații software: caiet de practică de specialitate"
 type: report
 authors:
-  - family-names: "<Nume>"
-    given-names: "<Prenume>"
+  - family-names: "Podolyak"
+    given-names: "Karina Iulia"
     affiliation: "Universitatea Tehnică din Cluj-Napoca, Centrul Universitar Nord din Baia Mare"
 contributors:
   - family-names: "Sabo"
