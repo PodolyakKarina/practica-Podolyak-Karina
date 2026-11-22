@@ -33,3 +33,18 @@ O intrare pe săptămână, completată la sfârșitul săptămânii. Scrieți c
 - **Ce urmează:** Finalizarea documentației aferente acestei etape în raportul de practică și pregătirea pentru următoarele sarcini din stagiu.
 - **Blocaje, întrebări pentru coordonator sau tutore:** Fără blocaje majore; eventuale clarificări privind prioritatea anumitor bug-uri identificate.
 - **Instrumente de asistență utilizate (inclusiv AI) și pentru ce:** Asistent AI utilizat pentru validarea modului de redactare a pașilor de reproducere a defectelor și actualizarea jurnalului în LaTeX.
+## Săptămâna 5 (11.11.2026)
+
+- **Ce am făcut:** Am rulat suita de teste a colegei pas cu pas în Google Sheets, am completat rezultatele observate și statusurile alături de rularea inițială, am adăugat un caz de test suplimentar (`TC30`), am documentat diferențele identificate (inclusiv cele generate de modificări în baza de date) și am raportat defectele găsite (`BUG01`–`BUG05`) cu dovezi video în Google Drive.
+- **Ce am învățat:** Am înțeles importanța reproductibilității cazurilor de test rulate de o altă persoană, modul în care se separă diferențele cauzate de starea datelor/bazei de date de defectele reale ale aplicației și cum se clasifică severitatea bug-urilor în funcție de impact.
+- **Ce urmează:** Continuarea parcurgerii etapelor de practică și trecerea spre înțelegerea nivelului API din spatele aplicației.
+- **Blocaje, întrebări pentru coordonator sau tutore:** Fără blocaje; am clarificat clasificarea severității defectelor și modul de evidențiere a diferențelor dintre rulări.
+- **Instrumente de asistență utilizate (inclusiv AI) și pentru ce:** Google Sheets și Google Drive (pentru completarea suitei, raportarea bug-urilor și stocarea dovezilor video). Asistent AI (pentru structurarea sintezei diferențelor, verificarea severității bug-urilor și redactarea secțiunilor din jurnal).
+
+## Săptămâna 6 (18.11.2026)
+
+- **Ce am făcut:** Am urmărit și analizat videoclipul tutorial *Postman Beginner's Course - API Testing* (http://www.youtube.com/watch?v=VywxIQ2ZXw4) primit de la colaborator, parcurgând conceptele de bază privind API-urile, comunicarea client–server și lucrul cu cereri/răspunsuri HTTP în Postman.
+- **Ce am învățat:** Am înțeles modul în care funcționează metodele HTTP (`GET`, `POST`, `PATCH`, `DELETE`), parametrii (`query` și `path`), antetele de autentificare (`Bearer Token`), formatul JSON, codurile de status (`200`, `201`, `204`, `400`, `401`, `404`), variabilele, aserțiunile de test (`pm.test`, `pm.expect`) și rularea automatizată a colecțiilor.
+- **Ce urmează:** Aplicarea practică a noțiunilor de testare API în etapele următoare ale stagiului de practică și actualizarea documentației aferente.
+- **Blocaje, întrebări pentru coordonator sau tutore:** Niciun blocaj; conceptele introductive din tutorial sunt clare.
+- **Instrumente de asistență utilizate (inclusiv AI) și pentru ce:** YouTube / Postman (pentru parcurgerea tutorialului video și familiarizarea cu fluxurile de testare API). Asistent AI (pentru sinteza conceptelor cheie din tutorial și redactarea intrării în jurnal).

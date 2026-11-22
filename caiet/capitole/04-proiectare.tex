@@ -1,9 +1,26 @@
-\chapter{Proiectarea soluției}
-\etapa{S1-E3}
-Modelul, arhitectura sau proiectul didactic; alegerile făcute și justificarea lor.
+\\chapter{Proiectarea soluției}
+\etapa{S1-E4}
 
-% Figurile se adaugă în caiet/figuri/:
-% \begin{figure}[ht]\centering
-%   \includegraphics[width=.8\linewidth]{figuri/arhitectura.png}
-%   \caption{Arhitectura aplicației.}\label{fig:arhitectura}
-% \end{figure}
+În această etapă a stagiului de practică, abordarea metodologică a urmărit tranziția de la testarea funcțională exploratorie individuală la **validarea încrucișată (*cross-testing*)** și **testarea negativă**, completate de pregătirea arhitecturală pentru testarea la nivel de interfață de programare a aplicațiilor (**API Testing**).
+
+\section{Metodologia de testare încrucișată și gestionarea defectelor (Săptămâna 3)}
+
+Pentru a elimina subiectivismul autorului în execuția propriilor cazuri de test și pentru a verifica claritatea pașilor documentați, am adoptat un flux de lucru colaborativ bazat pe următoarele alegeri tehnice:
+
+\begin{itemize}
+    \item \textbf{Execuția strictă a suitei colegei:} Suita de teste a fost rulată pas cu pas în Google Sheets, fără intervenții sau clarificări suplimentare din partea autorului, pentru a evalua reproductibilitatea scenariilor. Rezultatele proprii și statusurile aferente au fost înregistrate paralel cu rularea inițială.
+    \item \textbf{Analiza discrepanțelor (Difference Reporting):} Compararea celor două rulări a evidențiat diferențe de rezultate pe anumite filtre (ex. \texttt{TC07}, \texttt{TC08}, \texttt{TC10} pentru marca \textit{Fendt}). S-a justificat faptul că acestea nu reprezintă defecte ale aplicației, ci modificări survenite în baza de date (ștergerea unor anunțuri între cele două sesiuni de testare), comportamentul aplicației (afișarea mesajului pentru zero rezultate) rămânând valid (\textit{Pass}).
+    \item \textbf{Extinderea acoperirii prin teste negative și noi cazuri de test:} S-au adăugat scenarii noi pentru zonele neacoperite inițial (ex. \texttt{TC30} pentru linkurile din secțiunea \textit{Social Media} a subsolului paginii).
+    \item \textbf{Raportarea și clasificarea defectelor:} Fiecare caz eșuat (\textit{Fail}) a fost documentat într-un registru dedicat (\texttt{BUG01}--\texttt{BUG05}), respectând structura standard (pași de reproducere, rezultat observat vs. așteptat, mediu de testare, severitate și dovadă video stocată în Google Drive). Clasificarea severității s-a făcut în funcție de impactul asupra fluxului principal: defectele de navigare externă din \textit{footer} au fost încadrate la nivel \textit{Minor}, în timp ce disfuncționalitățile filtrelor principale au primit severitate \textit{Major} / \textit{Critical}.
+\end{itemize}
+
+\section{Arhitectura comunicării Client--Server și testarea API cu Postman (Săptămâna 4)}
+
+În cea de-a doua săptămână analizată, pregătirea tehnică s-a concentrat pe înțelegerea arhitecturii din spatele interfeței grafice (UI) prin studierea cursului practic \textit{Postman Beginner's Course - API Testing} (freeCodeCamp.org) [00:00:01]. Principalele concepte și alegeri arhitecturale asimilate pentru etapa următoare de testare sunt:
+
+\begin{itemize}
+    \item \textbf{Modelul Client--Server și protocolul HTTP/HTTPS:} Aplicația este privită ca un contract între client (browser sau Postman) și server (API), comunicarea realizându-se prin mesaje HTTP structurate (metodă, URL/endpoint, antete/\textit{headers} și corp/\textit{body} în format JSON) [00:07:28, 00:08:03].
+    \item \textbf{Operații CRUD și coduri de status HTTP:} Testarea endpoint-urilor se mapează pe metodele standard: \texttt{GET} pentru interogarea resurselor (ex. listarea produselor folosind parametri de tip \textit{query} sau \textit{path}), \texttt{POST} pentru crearea înregistrărilor (cu autentificare bazată pe \textit{Bearer Token}), \texttt{PATCH} pentru actualizări parțiale și \texttt{DELETE} pentru ștergere [00:17:17, 00:30:35, 00:39:42, 00:56:30, 00:59:51]. Validarea răspunsurilor se bazează pe codurile de status (\texttt{200 OK}, \texttt{201 Created}, \texttt{204 No Content} pentru succes, respectiv \texttt{400 Bad Request}, \texttt{401 Unauthorized}, \texttt{404 Not Found} pentru scenarii negative) [00:17:40, 00:19:52, 00:28:08, 00:31:52, 00:36:23, 00:58:37].
+    \item \textbf{Modularizarea și parametrizarea testelor:} Pentru a evita hardcodarea adreselor sau a datelor tranzacționale, s-a optat pentru organizarea request-urilor în \textbf{Colecții Postman} și utilizarea variabilelor de colecție/globale (ex. \texttt{\{\{baseUrl\}\}}, \texttt{\{\{accessToken\}\}}, \texttt{\{\{orderId\}\}}), alături de variabile dinamice (\texttt{\{\$randomFullName\}}) [00:11:51, 00:13:10, 00:37:17, 00:48:50, 01:21:39].
+    \item \textbf{Automatizarea aserțiunilor și execuția în flux:} Validarea automată a răspunsurilor se realizează în tab-ul \textit{Tests} prin scripturi JavaScript (\texttt{pm.test}, \texttt{pm.expect}), iar rularea înlănțuită a scenariilor este pregătită prin \textit{Collection Runner} și instrumentul CLI \textit{Newman} pentru integrare continuă [01:04:40, 01:11:48, 01:43:41, 01:58:01].
+\end{itemize}
