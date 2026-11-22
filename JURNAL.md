@@ -20,19 +20,20 @@ O intrare pe săptămână, completată la sfârșitul săptămânii. Scrieți c
 
 ## Săptămâna 3 (28.10.2026)
 
-- **Ce am făcut:** Am parcurs documentația introductivă de testare software primită în cadrul stagiului („Software testing - Introduction”)[cite: 1]. Am studiat conceptele fundamentale: ciclul de viață al dezvoltării software (SDLC)[cite: 3], metodologiile Agile/Scrum/Kanban[cite: 3, 4], principiile de testare[cite: 5], tipurile și nivelurile de testare (Black-box, Functional, Non-functional, Regresie, Smoke)[cite: 9, 10, 16], precum și structura unui defect (bug) și a cazurilor de testare[cite: 18, 24].
-- **Ce am învățat:** Am înțeles diferența dintre testarea statică și cea dinamică[cite: 17], importanța detectării timpurii a defectelor[cite: 5] și modul corect în care se definesc componentele unui bug (pași de reproducere, comportament actual vs. așteptat)[cite: 18].
+- **Ce am făcut:** Am parcurs documentația introductivă de testare software primită în cadrul stagiului („Software testing - Introduction”). Am studiat conceptele fundamentale: ciclul de viață al dezvoltării software (SDLC), metodologiile Agile/Scrum/Kanban, principiile de testare, tipurile și nivelurile de testare (Black-box, Functional, Non-functional, Regresie, Smoke), precum și structura unui defect (bug) și a cazurilor de testare.
+- **Ce am învățat:** Am înțeles diferența dintre testarea statică și cea dinamică, importanța detectării timpurii a defectelor și modul corect în care se definesc componentele unui bug (pași de reproducere, comportament actual vs. așteptat).
 - **Ce urmează:** Trecerea la partea practică de interacțiune cu aplicația/site-ul web pus la dispoziție pentru testare.
 - **Blocaje, întrebări pentru coordonator sau tutore:** Niciun blocaj; concepte teoretice asimilate cu succes.
 - **Instrumente de asistență utilizate (inclusiv AI) și pentru ce:** Asistent AI utilizat pentru clarificarea unor termeni tehnici din documentația de referință și structurarea notițelor de curs.
 
 ## Săptămâna 4 (04.11.2026)
 
-- **Ce am făcut:** Am realizat o sesiune completă de testare exploratorie și black-box pe site-ul/aplicația alocată[cite: 9, 12, 16]. Am interacționat cu toate elementele interfeței (butoane, formulare, meniuri și linkuri) pentru a verifica comportamentul aplicației în scenarii reale de utilizare. Am identificat, izolat și documentat bug-urile găsite, respectând structura standard a unui tichet (titlu, pași de reproducere, severitate și rezultate observate)[cite: 18].
-- **Ce am învățat:** Am aplicat practic tehnicile de testare black-box[cite: 9, 13], am exersat gândirea critică specifică unui tester (pesticide paradox, defect clustering)[cite: 5, 6] și am învățat cum se raportează corect o eroare de software pentru a fi ușor de reprodus de către programatori.
+- **Ce am făcut:** Am realizat o sesiune completă de testare exploratorie și black-box pe site-ul/aplicația alocată. Am interacționat cu toate elementele interfeței (butoane, formulare, meniuri și linkuri) pentru a verifica comportamentul aplicației în scenarii reale de utilizare. Am identificat, izolat și documentat bug-urile găsite, respectând structura standard a unui tichet (titlu, pași de reproducere, severitate și rezultate observate).
+- **Ce am învățat:** Am aplicat practic tehnicile de testare black-box, am exersat gândirea critică specifică unui tester (pesticide paradox, defect clustering) și am învățat cum se raportează corect o eroare de software pentru a fi ușor de reprodus de către programatori.
 - **Ce urmează:** Finalizarea documentației aferente acestei etape în raportul de practică și pregătirea pentru următoarele sarcini din stagiu.
 - **Blocaje, întrebări pentru coordonator sau tutore:** Fără blocaje majore; eventuale clarificări privind prioritatea anumitor bug-uri identificate.
 - **Instrumente de asistență utilizate (inclusiv AI) și pentru ce:** Asistent AI utilizat pentru validarea modului de redactare a pașilor de reproducere a defectelor și actualizarea jurnalului în LaTeX.
+
 ## Săptămâna 5 (11.11.2026)
 
 - **Ce am făcut:** Am rulat suita de teste a colegei pas cu pas în Google Sheets, am completat rezultatele observate și statusurile alături de rularea inițială, am adăugat un caz de test suplimentar (`TC30`), am documentat diferențele identificate (inclusiv cele generate de modificări în baza de date) și am raportat defectele găsite (`BUG01`–`BUG05`) cu dovezi video în Google Drive.
